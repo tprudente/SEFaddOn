@@ -7,56 +7,77 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            text-align: center;
+            padding: 0 15px;
             background-color: #f4f4f9;
             color: #333;
         }
         header {
-            background-color: #6200ea;
+            text-align: center;
+            padding: 20px;
+            background: #6200ea;
             color: white;
-            padding: 20px 0;
         }
-        nav {
-            margin: 20px 0;
+        h1 {
+            margin: 0;
         }
-        nav a {
-            text-decoration: none;
-            color: white;
-            margin: 0 15px;
-            font-weight: bold;
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            margin: 20px;
+        h2 {
+            color: #6200ea;
         }
         footer {
-            background-color: #333;
-            color: white;
+            text-align: center;
+            margin-top: 20px;
             padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            font-size: 0.9em;
+            background: #333;
+            color: white;
+        }
+        a {
+            color: #6200ea;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="privacy.html">Privacy Policy</a>
-        </nav>
+        <h1>SEF Boletins de Alojamento</h1>
     </header>
-    <main>
-        <p>This is a simple static website. Hosted using GitHub Pages!</p>
-    </main>
+    <section>
+        <h2>About SEF Boletins de Alojamento Add-on</h2>
+        <p><strong>SEF Boletins de Alojamento</strong> is a powerful Google Sheets Add-on designed to streamline the process of sending <strong>Boletins de Alojamento</strong> (Accommodation Bulletins) to SEF (Serviço de Estrangeiros e Fronteiras) in Portugal.</p>
+
+        <h2>How It Works</h2>
+        <p>Once you install the Add-on, follow these simple steps to start automating the process:</p>
+        <ul>
+            <li>Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href="[Insert Google Drive Link Here]" target="_blank">here</a>.</li>
+            <li>Install the <strong>SEF Boletins de Alojamento Add-on</strong> in your Google Sheets document.</li>
+            <li>The Add-on will process the data in your sheet and send the required information to SEF via Webservice.</li>
+            <li>If an error occurs during submission, the Add-on will automatically send you an email notification to keep you informed.</li>
+        </ul>
+
+        <h2>Why Choose SEF Boletins de Alojamento?</h2>
+        <ul>
+            <li><strong>Efficient</strong>: Automates the tedious process of submitting accommodation reports to SEF, saving you time and reducing human error.</li>
+            <li><strong>Secure</strong>: Your data is processed directly from your Google Sheet, and no private information is stored or shared. The Add-on only accesses your email to notify you if an error occurs.</li>
+            <li><strong>Simple to Use</strong>: Easily integrate the Add-on into your Google Sheets document with just a few clicks.</li>
+        </ul>
+
+        <p>Whether you're managing multiple accommodation records or looking for an easy way to stay compliant with SEF regulations, <strong>SEF Boletins de Alojamento</strong> is the ideal solution to simplify your workflow.</p>
+
+        <h2>Learn More About Our Privacy Policy</h2>
+        <p>To understand how we handle your data, please read our <a href="[Insert Privacy Page Link Here]" target="_blank">Privacy Policy</a>.</p>
+    </section>
     <footer>
         <p>© 2024 All rights reserved.</p>
-        <a href="privacy.html">Privacy Policy</a>    
     </footer>
 </body>
 </html>
