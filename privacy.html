@@ -7,15 +7,103 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
             line-height: 1.6;
+            margin: 0;
+            padding: 0 15px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #6200ea;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+        }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #6200ea;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px 0;
+            font-size: 0.9em;
+            background: #333;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p>Your privacy is important to us. This page outlines the types of personal information we receive and collect when you use this website.</p>
-    <p>...</p>
-    <a href="index.html">Go Back to Home</a>
+    <header>
+        <h1>Privacy Policy</h1>
+    </header>
+    <section>
+        <h2>Introduction</h2>
+        <p>This Privacy Policy explains how <strong>SEF Boletins de Alojamento</strong> ("the Add-on") handles your information when you use it in conjunction with Google Sheets. By using the Add-on, you agree to the terms of this Privacy Policy.</p>
+
+        <h2>How the Add-on Works</h2>
+        <p>The Add-on is designed to assist users in automating the process of sending <strong>Boletins de Alojamento</strong> via Webservice to SEF (Serviço de Estrangeiros e Fronteiras) based on data provided in their Google Sheets documents.</p>
+        <ul>
+            <li>Runs automatically (daily or on-demand) as configured by the user.</li>
+            <li>Processes data within the user’s Google Sheet to prepare and send the required information to SEF.</li>
+            <li>Sends an email notification to the user in case an error occurs during processing.</li>
+        </ul>
+
+        <h2>Information We Access</h2>
+        <p>The Add-on uses specific Google API scopes to perform its functions:</p>
+        <h3>Non-Sensitive Scopes</h3>
+        <ul>
+            <li><strong>Access to your Google Drive files</strong>: The Add-on accesses only the specific Google Sheets document where it is installed to read and process the data required to send Boletins de Alojamento.</li>
+            <li><strong>View your primary email address</strong>: The Add-on uses your email address to identify you as the user.</li>
+        </ul>
+        <h3>Sensitive Scopes</h3>
+        <ul>
+            <li><strong>Send email on your behalf</strong>: The Add-on sends emails to your email address only when an error occurs during processing. These emails include information about the error to assist in resolving the issue.</li>
+        </ul>
+
+        <h2>Data Handling</h2>
+        <ul>
+            <li><strong>No Private Data is Received or Stored</strong>: The Add-on does not collect, store, or transmit private data to the Add-on owner or any third party.</li>
+            <li><strong>On-the-Fly Processing</strong>: All processing is done locally within the user's Google Sheet and the SEF Webservice. The Add-on does not retain or manage any user data.</li>
+            <li><strong>Email Notifications</strong>: Emails are sent only to the user’s primary Google Account email address in case of an error, ensuring no third-party data sharing occurs.</li>
+        </ul>
+
+        <h2>User Responsibilities</h2>
+        <p>As the user, you are responsible for:</p>
+        <ul>
+            <li>Ensuring the accuracy of the data entered into the Google Sheet.</li>
+            <li>Managing access permissions to the Google Sheet where the Add-on is installed.</li>
+            <li>Complying with local regulations regarding the handling of Boletins de Alojamento.</li>
+        </ul>
+
+        <h2>Data Security</h2>
+        <p>The Add-on leverages Google’s secure API environment, ensuring that:</p>
+        <ul>
+            <li>Data transmission occurs over secure connections (HTTPS).</li>
+            <li>Access to your Google Sheets and email is restricted to the specific permissions granted by you when installing the Add-on.</li>
+        </ul>
+
+        <h2>Third-Party Sharing</h2>
+        <p>The Add-on does not share or sell your information to any third party. Data processed by the Add-on is sent directly to SEF's Webservice as configured by the user.</p>
+
+        <h2>Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy to reflect changes in the Add-on’s functionality or applicable legal requirements. The latest version will always be available within the Add-on description or website.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or the Add-on, please contact us at <a href="mailto:al.manager23@gmail.com">[YourEmail]</a>.</p>
+    </section>
+    <footer>
+        <p>© 2024 All rights reserved.</p>
+    </footer>
 </body>
 </html>
