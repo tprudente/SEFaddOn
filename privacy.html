@@ -59,7 +59,7 @@
         <a href="index.html" id="home-link">Home</a>
         <a href="privacy.html" id="privacy-link">Privacy Policy</a>
         <div class="language-links">
-            <a href="#" id="link-en">EN</a> | <a href="#" id="link-pt">PT</a>
+            <a href="#" id="link-pt">PT</a> | <a href="#" id="link-en">EN</a>
         </div>
     </nav>
     <main>
@@ -118,14 +118,14 @@
                 "privacy-link": "Política de Privacidade",
                 "introduction": "Introdução",
                 "intro-description": "No SEF Boletins de Alojamento, valorizamos a sua privacidade. Esta Política de Privacidade descreve como tratamos e protegemos os dados que nos fornece através do nosso Add-on para Google Sheets.",
-                "data-collection": "Coleta de Dados",
-                "data-collection-description": "O nosso Add-on não coleta ou armazena informações pessoais além do que é necessário para o funcionamento do Add-on:",
+                "data-collection": "Recolha de Dados",
+                "data-collection-description": "O nosso Add-on não recolhe ou armazena informações pessoais além do que é necessário para o funcionamento do Add-on:",
                 "data-collection-item-1": "Usamos o seu endereço de e-mail do Google para notificá-lo caso ocorra um erro durante o processo de envio dos dados.",
-                "data-collection-item-2": "Não coletamos ou armazenamos dados das suas Fichas do Google ou qualquer outra informação privada.",
+                "data-collection-item-2": "Não recolhemos ou armazenamos dados das suas sheets do Google ou qualquer outra informação privada.",
                 "how-we-use": "Como Usamos os Seus Dados",
                 "how-we-use-description": "O seu endereço de e-mail é utilizado apenas para notificações de erro relacionadas ao Add-on. Não compartilhamos, armazenamos ou processamos quaisquer outros dados pessoais.",
                 "security": "Segurança",
-                "security-description": "Os seus dados são processados de forma segura pelo Add-on, e nenhum dado pessoal é armazenado por nós. O Add-on interage diretamente com as Fichas do Google e utiliza chamadas de serviço web seguras para enviar os Boletins de Alojamento ao SEF.",
+                "security-description": "Os seus dados são processados de forma segura pelo Add-on, e nenhum dado pessoal é armazenado por nós. O Add-on interage diretamente com as sheets do Google e utiliza chamadas de serviço web seguras para enviar os Boletins de Alojamento ao SEF.",
                 "changes-to-policy": "Alterações a Esta Política",
                 "changes-description": "Podemos atualizar esta Política de Privacidade de tempos em tempos para refletir alterações nas nossas práticas. Recomendamos que verifique esta página regularmente para qualquer atualização.",
                 "contact-information": "Informações de Contato",
@@ -133,7 +133,7 @@
             }
         };
 
-        let currentLanguage = localStorage.getItem('language') || 'en'; // Default language is English
+        let currentLanguage = localStorage.getItem('language') || 'pt'; // Default language is English
 
         function loadLanguage(language) {
             const lang = translations[language];
