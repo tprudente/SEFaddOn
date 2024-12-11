@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEF Boletins de Alojamento</title>
+    <title id="page-title">SEF Boletins de Alojamento</title>
     <style>
         body {
             display: flex;
@@ -23,6 +23,7 @@
             background: #f4f4f4;
             padding: 0.5rem;
             text-align: center;
+            position: relative;
         }
         nav a {
             margin: 0 1rem;
@@ -32,8 +33,14 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .language-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 16px;
+        }
         main {
-            flex: 1; /* Ensures main content takes up available space */
+            flex: 1;
             padding: 1rem;
         }
         footer {
@@ -53,37 +60,104 @@
 </head>
 <body>
     <header>
-        <h1>SEF Boletins de Alojamento</h1>
+        <h1 id="header-title">SEF Boletins de Alojamento</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="index.html" id="home-link">Home</a>
+        <a href="privacy.html" id="privacy-link">Privacy Policy</a>
+        <div class="language-links">
+            <a href="#" id="link-en">EN</a> | <a href="#" id="link-pt">PT</a>
+        </div>
     </nav>
     <main>
-        <h2>Welcome to SEF Boletins de Alojamento</h2>
-        <p>This Google Add-On helps you automate the submission of Boletins de Alojamento to SEF using your Google Sheets.</p>
+        <h2 id="main-title">Welcome to SEF Boletins de Alojamento</h2>
+        <p id="main-description">This Google Add-On helps you automate the submission of Boletins de Alojamento to SEF using your Google Sheets.</p>
 
-        <h3>How It Works</h3>
-        <p>To get started, follow the instructions below:</p>
-        <div class="instructions">
+        <h3 id="how-it-works">How It Works</h3>
+        <p id="how-it-works-description">To get started, follow the instructions below:</p>
+        <div class="instructions" id="instructions">
             <ol>
-                <li>Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href="https://drive.google.com/drive/folders/1s9DltzwwZ1_d-jpRuUTXj3wuYMPV0wKr">here</a>.</li>
-                <li>After making a copy, you will become the owner of the form. You can then share the form link with your clients to collect their information.</li>
-                <li>Once you start getting responses, navigate to the google sheets Answers and install the Add-on</li>
-                <li>Click on <strong>SEF Definições -> Configurações</strong> and fill in your personal information</li>
-                <li><strong>Important:</strong> Do not modify the structure of the form as it may affect the functionality of the add-on.</li>
-                <li><strong>Note:</strong> Upon registration on SIBA website, if you did not choose the send method <strong>Webservice</strong>, you need to contact them and request to change it.
-                You can find their contacts <a href="https://siba.ssi.gov.pt/contactos/" target="_blank" >here</a></li>
+                <li id="step-1">Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href="https://drive.google.com/drive/folders/1s9DltzwwZ1_d-jpRuUTXj3wuYMPV0wKr" target="_blank">here</a>.</li>
+                <li id="step-2">After making a copy, you will become the owner of the form. You can then share the form link with your clients to collect their information.</li>
+                <li id="step-3">Once you start getting responses, navigate to the google sheets Answers and install the Add-on</li>
+                <li id="step-4">Click on <strong>SEF Definições -> Configurações</strong> and fill in your personal information</li>
+                <li id="step-5"><strong>Important:</strong> Do not modify the structure of the form as it may affect the functionality of the add-on.</li>
+                <li id="step-6"><strong>Note:</strong> Upon registration on SIBA website, if you did not choose the send method <strong>Webservice</strong>, you need to contact them and request to change it. You can find their contacts <a href="https://siba.ssi.gov.pt/contactos/" target="_blank">here</a></li>
             </ol>
         </div>
 
-        <h3>Why Use This Add-On?</h3>
-         <li><strong>Efficient</strong>: Automates the tedious process of submitting accommodation reports to SEF, saving you time and reducing human error.</li>
-         <li><strong>Secure</strong>: Your data is processed directly from your Google Sheet, and no private information is stored or shared. The Add-on only accesses your email to notify you if an error occurs.</li>
-         <li><strong>Simple to Use</strong>: Easily integrate the Add-on into your Google Sheets document with just a few clicks.</li>
+        <h3 id="why-use">Why Use This Add-On?</h3>
+        <ul>
+            <li id="reason-1"><strong>Efficient</strong>: Automates the tedious process of submitting accommodation reports to SEF, saving you time and reducing human error.</li>
+            <li id="reason-2"><strong>Secure</strong>: Your data is processed directly from your Google Sheet, and no private information is stored or shared. The Add-on only accesses your email to notify you if an error occurs.</li>
+            <li id="reason-3"><strong>Simple to Use</strong>: Easily integrate the Add-on into your Google Sheets document with just a few clicks.</li>
+        </ul>
     </main>
     <footer>
         <p>&copy; 2024 All rights reserved</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        const translations = {
+            en: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "main-title": "Welcome to SEF Boletins de Alojamento",
+                "main-description": "This Google Add-On helps you automate the submission of Boletins de Alojamento to SEF using your Google Sheets.",
+                "how-it-works": "How It Works",
+                "how-it-works-description": "To get started, follow the instructions below:",
+                "step-1": "Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href='https://drive.google.com/drive/folders/1s9DltzwwZ1_d-jpRuUTXj3wuYMPV0wKr' target='_blank'>here</a>.",
+                "step-2": "After making a copy, you will become the owner of the form. You can then share the form link with your clients to collect their information.",
+                "step-3": "Once you start getting responses, navigate to the google sheets Answers and install the Add-on",
+                "step-4": "Click on <strong>SEF Definições -> Configurações</strong> and fill in your personal information",
+                "step-5": "<strong>Important:</strong> Do not modify the structure of the form as it may affect the functionality of the add-on.",
+                "step-6": "<strong>Note:</strong> Upon registration on SIBA website, if you did not choose the send method <strong>Webservice</strong>, you need to contact them and request to change it. You can find their contacts <a href='https://siba.ssi.gov.pt/contactos/' target='_blank'>here</a>",
+                "why-use": "Why Use This Add-On?",
+                "reason-1": "<strong>Efficient</strong>: Automates the tedious process of submitting accommodation reports to SEF, saving you time and reducing human error.",
+                "reason-2": "<strong>Secure</strong>: Your data is processed directly from your Google Sheet, and no private information is stored or shared. The Add-on only accesses your email to notify you if an error occurs.",
+                "reason-3": "<strong>Simple to Use</strong>: Easily integrate the Add-on into your Google Sheets document with just a few clicks.",
+                "home-link": "Home",
+                "privacy-link": "Privacy Policy",
+            },
+            pt: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "main-title": "Bem-vindo ao SEF Boletins de Alojamento",
+                "main-description": "Este Google Add-On ajuda a automatizar o envio de Boletins de Alojamento para o SEF usando as suas Fichas do Google.",
+                "how-it-works": "Como Funciona",
+                "how-it-works-description": "Para começar, siga as instruções abaixo:",
+                "step-1": "Baixe um <strong><u>modelo de Google Forms</u></strong> para inserir os dados de acomodação. Você pode acessar e baixar o modelo <a href='https://drive.google.com/drive/folders/1s9DltzwwZ1_d-jpRuUTXj3wuYMPV0wKr' target='_blank'>aqui</a>.",
+                "step-2": "Depois de fazer uma cópia, você será o proprietário do formulário. Você pode então compartilhar o link do formulário com seus clientes para coletar as informações.",
+                "step-3": "Assim que começar a receber respostas, navegue até as Fichas do Google e instale o Add-on",
+                "step-4": "Clique em <strong>SEF Definições -> Configurações</strong> e preencha suas informações pessoais",
+                "step-5": "<strong>Importante:</strong> Não modifique a estrutura do formulário, pois isso pode afetar a funcionalidade do add-on.",
+                "step-6": "<strong>Aviso:</strong> Ao se registrar no site SIBA, se não tiver escolhido o método de envio <strong>Webservice</strong>, você precisará entrar em contato com eles e solicitar a alteração. Você pode encontrar os contatos <a href='https://siba.ssi.gov.pt/contactos/' target='_blank'>aqui</a>",
+                "why-use": "Por que usar este Add-On?",
+                "reason-1": "<strong>Eficiência</strong>: Automatiza o processo tedioso de envio de relatórios de acomodação para o SEF, economizando tempo e reduzindo erros humanos.",
+                "reason-2": "<strong>Seguro</strong>: Seus dados são processados diretamente a partir da sua Ficha do Google, e nenhuma informação privada é armazenada ou compartilhada. O Add-on acessa apenas seu e-mail para notificá-lo se ocorrer um erro.",
+                "reason-3": "<strong>Simples de usar</strong>: Integre facilmente o Add-on no seu documento do Google Sheets com apenas alguns cliques.",
+                "home-link": "Página Inicial",
+                "privacy-link": "Política de Privacidade",
+            }
+        };
+
+        let currentLanguage = 'en'; // Default language is English
+
+        function loadLanguage(language) {
+            const lang = translations[language];
+            for (let id in lang) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = lang[id];
+                }
+            }
+        }
+
+        document.getElementById('link-en').addEventListener('click', () => {
+            currentLanguage = 'en';
+            loadLanguage(currentLanguage);
+        });
+
+        document.getElementById('link-pt').addEventListener('click', () => {
+            currentLanguage = 'pt';
+            loadLanguage(currentLanguage);
