@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SEF Boletins de Alojamento</title>
+    <title id="page-title">SEF Boletins de Alojamento</title>
     <style>
         body {
             display: flex;
@@ -23,6 +23,7 @@
             background: #f4f4f4;
             padding: 0.5rem;
             text-align: center;
+            position: relative;
         }
         nav a {
             margin: 0 1rem;
@@ -32,8 +33,14 @@
         nav a:hover {
             text-decoration: underline;
         }
+        .language-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 16px;
+        }
         main {
-            flex: 1; /* Ensures main content takes up available space */
+            flex: 1;
             padding: 1rem;
         }
         footer {
@@ -42,48 +49,115 @@
             text-align: center;
             padding: 1rem 0;
         }
-        .instructions {
-            margin-top: 1rem;
-            padding: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background: #f9f9f9;
-        }
     </style>
 </head>
 <body>
-     <header>
-        <h1>SEF Boletins de Alojamento</h1>
+    <header>
+        <h1 id="header-title">SEF Boletins de Alojamento</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="index.html" id="home-link">Home</a>
+        <a href="privacy.html" id="privacy-link">Privacy Policy</a>
+        <div class="language-links">
+            <a href="#" id="link-en">EN</a> | <a href="#" id="link-pt">PT</a>
+        </div>
     </nav>
     <main>
-        <h2>Introduction</h2>
-        <p>At SEF Boletins de Alojamento, we value your privacy. This Privacy Policy outlines how we handle and protect the data that you provide through our Google Sheets Add-on.</p>
+        <h2 id="introduction">Introduction</h2>
+        <p id="intro-description">At SEF Boletins de Alojamento, we value your privacy. This Privacy Policy outlines how we handle and protect the data that you provide through our Google Sheets Add-on.</p>
 
-        <h2>Data Collection</h2>
-        <p>Our Add-on does not collect or store any personal information beyond what is required for the Add-on’s functionality:</p>
+        <h2 id="data-collection">Data Collection</h2>
+        <p id="data-collection-description">Our Add-on does not collect or store any personal information beyond what is required for the Add-on’s functionality:</p>
         <ul>
-            <li>We use your Google email address to notify you if an error occurs during the data submission process.</li>
-            <li>We do not collect or store any data from your Google Sheets or any other private information.</li>
+            <li id="data-collection-item-1">We use your Google email address to notify you if an error occurs during the data submission process.</li>
+            <li id="data-collection-item-2">We do not collect or store any data from your Google Sheets or any other private information.</li>
         </ul>
 
-        <h2>How We Use Your Data</h2>
-        <p>Your email address is only used for error notifications related to the Add-on. We do not share, store, or process any other personal data.</p>
+        <h2 id="how-we-use">How We Use Your Data</h2>
+        <p id="how-we-use-description">Your email address is only used for error notifications related to the Add-on. We do not share, store, or process any other personal data.</p>
 
-        <h2>Security</h2>
-        <p>Your data is processed securely by the Add-on, and no personal data is stored by us. The Add-on interacts directly with Google Sheets and uses secure web service calls to submit the Boletins de Alojamento to SEF.</p>
+        <h2 id="security">Security</h2>
+        <p id="security-description">Your data is processed securely by the Add-on, and no personal data is stored by us. The Add-on interacts directly with Google Sheets and uses secure web service calls to submit the Boletins de Alojamento to SEF.</p>
 
-        <h2>Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices. We encourage you to check this page regularly for any updates.</p>
+        <h2 id="changes-to-policy">Changes to This Policy</h2>
+        <p id="changes-description">We may update this Privacy Policy from time to time to reflect changes in our practices. We encourage you to check this page regularly for any updates.</p>
 
-        <h2>Contact Information</h2>
-        <p>If you have any questions about this Privacy Policy, feel free to contact us.</p>
+        <h2 id="contact-information">Contact Information</h2>
+        <p id="contact-description">If you have any questions about this Privacy Policy, feel free to contact us.</p>
     </main>
     <footer>
-        <p>© 2024 All rights reserved.</p>
+        <p>&copy; 2024 All rights reserved.</p>
     </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "home-link": "Home",
+                "privacy-link": "Privacy Policy",
+                "introduction": "Introduction",
+                "intro-description": "At SEF Boletins de Alojamento, we value your privacy. This Privacy Policy outlines how we handle and protect the data that you provide through our Google Sheets Add-on.",
+                "data-collection": "Data Collection",
+                "data-collection-description": "Our Add-on does not collect or store any personal information beyond what is required for the Add-on’s functionality:",
+                "data-collection-item-1": "We use your Google email address to notify you if an error occurs during the data submission process.",
+                "data-collection-item-2": "We do not collect or store any data from your Google Sheets or any other private information.",
+                "how-we-use": "How We Use Your Data",
+                "how-we-use-description": "Your email address is only used for error notifications related to the Add-on. We do not share, store, or process any other personal data.",
+                "security": "Security",
+                "security-description": "Your data is processed securely by the Add-on, and no personal data is stored by us. The Add-on interacts directly with Google Sheets and uses secure web service calls to submit the Boletins de Alojamento to SEF.",
+                "changes-to-policy": "Changes to This Policy",
+                "changes-description": "We may update this Privacy Policy from time to time to reflect changes in our practices. We encourage you to check this page regularly for any updates.",
+                "contact-information": "Contact Information",
+                "contact-description": "If you have any questions about this Privacy Policy, feel free to contact us."
+            },
+            pt: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "home-link": "Página Inicial",
+                "privacy-link": "Política de Privacidade",
+                "introduction": "Introdução",
+                "intro-description": "No SEF Boletins de Alojamento, valorizamos a sua privacidade. Esta Política de Privacidade descreve como tratamos e protegemos os dados que nos fornece através do nosso Add-on para Google Sheets.",
+                "data-collection": "Coleta de Dados",
+                "data-collection-description": "O nosso Add-on não coleta ou armazena informações pessoais além do que é necessário para o funcionamento do Add-on:",
+                "data-collection-item-1": "Usamos o seu endereço de e-mail do Google para notificá-lo caso ocorra um erro durante o processo de envio dos dados.",
+                "data-collection-item-2": "Não coletamos ou armazenamos dados das suas Fichas do Google ou qualquer outra informação privada.",
+                "how-we-use": "Como Usamos os Seus Dados",
+                "how-we-use-description": "O seu endereço de e-mail é utilizado apenas para notificações de erro relacionadas ao Add-on. Não compartilhamos, armazenamos ou processamos quaisquer outros dados pessoais.",
+                "security": "Segurança",
+                "security-description": "Os seus dados são processados de forma segura pelo Add-on, e nenhum dado pessoal é armazenado por nós. O Add-on interage diretamente com as Fichas do Google e utiliza chamadas de serviço web seguras para enviar os Boletins de Alojamento ao SEF.",
+                "changes-to-policy": "Alterações a Esta Política",
+                "changes-description": "Podemos atualizar esta Política de Privacidade de tempos em tempos para refletir alterações nas nossas práticas. Recomendamos que verifique esta página regularmente para qualquer atualização.",
+                "contact-information": "Informações de Contato",
+                "contact-description": "Se tiver alguma dúvida sobre esta Política de Privacidade, sinta-se à vontade para nos contactar."
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'en'; // Default language is English
+
+        function loadLanguage(language) {
+            const lang = translations[language];
+            for (let id in lang) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = lang[id];
+                }
+            }
+        }
+
+        document.getElementById('link-en').addEventListener('click', () => {
+            currentLanguage = 'en';
+            localStorage.setItem('language', currentLanguage);
+            loadLanguage(currentLanguage);
+        });
+
+        document.getElementById('link-pt').addEventListener('click', () => {
+            currentLanguage = 'pt';
+            localStorage.setItem('language', currentLanguage);
+            loadLanguage(currentLanguage);
+        });
+
+        loadLanguage(currentLanguage); // Initial language load
+    </script>
 </body>
 </html>
