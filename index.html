@@ -6,10 +6,12 @@
     <title>SEF Boletins de Alojamento</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
         }
         header {
             background: #0073e6;
@@ -31,6 +33,7 @@
             text-decoration: underline;
         }
         main {
+            flex: 1; /* Ensures main content takes up available space */
             padding: 1rem;
         }
         footer {
@@ -38,9 +41,6 @@
             color: #555;
             text-align: center;
             padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
         .instructions {
             margin-top: 1rem;
