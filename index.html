@@ -9,41 +9,45 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0 15px;
-            background-color: #f4f4f9;
-            color: #333;
+            padding: 0;
         }
         header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            padding: 20px;
-            background: #6200ea;
-            color: white;
         }
-        h1 {
-            margin: 0;
+        nav {
+            background: #f4f4f4;
+            padding: 0.5rem;
+            text-align: center;
         }
-        section {
-            margin: 20px auto;
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #0073e6;
         }
-        h2 {
-            color: #6200ea;
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 1rem;
         }
         footer {
+            background: #f4f4f4;
+            color: #555;
             text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            font-size: 0.9em;
-            background: #333;
-            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
-        a {
-            color: #6200ea;
-            text-decoration: underline;
+        .instructions {
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
         }
     </style>
 </head>
@@ -51,33 +55,30 @@
     <header>
         <h1>SEF Boletins de Alojamento</h1>
     </header>
-    <section>
-        <h2>About SEF Boletins de Alojamento Add-on</h2>
-        <p><strong>SEF Boletins de Alojamento</strong> is a powerful Google Sheets Add-on designed to streamline the process of sending <strong>Boletins de Alojamento</strong> (Accommodation Bulletins) to SEF (Serviço de Estrangeiros e Fronteiras) in Portugal.</p>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </nav>
+    <main>
+        <h2>Welcome to SEF Boletins de Alojamento</h2>
+        <p>This Google Add-On helps you automate the submission of Boletins de Alojamento to SEF using your Google Sheets.</p>
 
-        <h2>How It Works</h2>
-        <p>Once you install the Add-on, follow these simple steps to start automating the process:</p>
-        <ul>
-            <li>Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href="https://docs.google.com/forms/d/1iA-Kkq3lrTD5kT0lF_nz7UaAi9hhpIprPC4K76fTU_I/copy" target="_blank">here</a>.</li>
-            <li>Install the <strong>SEF Boletins de Alojamento Add-on</strong> in your Google Sheets document.</li>
-            <li>The Add-on will process the data in your sheet and send the required information to SEF via Webservice.</li>
-            <li>If an error occurs during submission, the Add-on will automatically send you an email notification to keep you informed.</li>
-        </ul>
+        <h3>How It Works</h3>
+        <p>To get started, follow the instructions below:</p>
+        <div class="instructions">
+            <ol>
+                <li>Download a <strong><u>Google Forms template</u></strong> to input your accommodation data. You can access and download the template from <a href="https://drive.google.com/drive/folders/1s9DltzwwZ1_d-jpRuUTXj3wuYMPV0wKr">here</a>.</li>
+                <li>After making a copy, you will become the owner of the form. You can then share the form link with your clients to collect their information.</li>
+                <li>All responses will be saved in your own Google account, and you will have complete control over the data. The add-on does not access or store your data.</li>
+                <li><strong>Important:</strong> Do not modify the structure of the form as it may affect the functionality of the add-on.</li>
+            </ol>
+        </div>
 
-        <h2>Why Choose SEF Boletins de Alojamento?</h2>
-        <ul>
-            <li><strong>Efficient</strong>: Automates the tedious process of submitting accommodation reports to SEF, saving you time and reducing human error.</li>
-            <li><strong>Secure</strong>: Your data is processed directly from your Google Sheet, and no private information is stored or shared. The Add-on only accesses your email to notify you if an error occurs.</li>
-            <li><strong>Simple to Use</strong>: Easily integrate the Add-on into your Google Sheets document with just a few clicks.</li>
-        </ul>
-
-        <p>Whether you're managing multiple accommodation records or looking for an easy way to stay compliant with SEF regulations, <strong>SEF Boletins de Alojamento</strong> is the ideal solution to simplify your workflow.</p>
-
-        <h2>Learn More About Our Privacy Policy</h2>
-        <p>To understand how we handle your data, please read our <a href="privacy.html" target="_blank">Privacy Policy</a>.</p>
-    </section>
+        <h3>Why Use This Add-On?</h3>
+        <p>By automating the process of submitting Boletins de Alojamento to SEF, this tool saves you time and ensures compliance with SEF requirements.</p>
+    </main>
     <footer>
-        <p>© 2024 All rights reserved.</p>
+        <p>&copy; 2024 All rights reserved</p>
     </footer>
 </body>
 </html>
