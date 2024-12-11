@@ -3,68 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - SEF Boletins de Alojamento</title>
+        <title>SEF Boletins de Alojamento</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0 15px;
-            background-color: #f4f4f9;
-            color: #333;
         }
         header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            padding: 20px;
-            background: #6200ea;
-            color: white;
-            position: relative;
         }
-        header a {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            color: white;
+        nav {
+            background: #f4f4f4;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 1rem;
             text-decoration: none;
-            font-size: 16px;
-            padding: 8px;
-            background-color: #6200ea;
-            border-radius: 5px;
+            color: #0073e6;
         }
-        h1 {
-            margin: 0;
+        nav a:hover {
+            text-decoration: underline;
         }
-        section {
-            margin: 20px auto;
-            max-width: 800px;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            color: #6200ea;
+        main {
+            flex: 1; /* Ensures main content takes up available space */
+            padding: 1rem;
         }
         footer {
+            background: #f4f4f4;
+            color: #555;
             text-align: center;
-            margin-top: 20px;
-            padding: 10px 0;
-            font-size: 0.9em;
-            background: #333;
-            color: white;
+            padding: 1rem 0;
         }
-        a {
-            color: #6200ea;
-            text-decoration: underline;
+        .instructions {
+            margin-top: 1rem;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <header>
-        
-        <h1>Privacy Policy for SEF Boletins de Alojamento</h1>
-        <a href="index.html">Home</a>
+     <header>
+        <h1>SEF Boletins de Alojamento</h1>
     </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </nav>
     <section>
         <h2>Introduction</h2>
         <p>At SEF Boletins de Alojamento, we value your privacy. This Privacy Policy outlines how we handle and protect the data that you provide through our Google Sheets Add-on.</p>
