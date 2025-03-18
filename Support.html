@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">SEF Boletins de Alojamento</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        header {
+            background: #0073e6;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 0.5rem;
+            text-align: center;
+            position: relative;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #0073e6;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .language-links {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 16px;
+        }
+        main {
+            flex: 1;
+            padding: 1rem;
+        }
+        footer {
+            background: #f4f4f4;
+            color: #555;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">SEF Boletins de Alojamento</h1>
+    </header>
+    <nav>
+        <a href="index.html" id="home-link">Página Inicial</a>
+        <a href="privacy.html" id="privacy-link">Política de Privacidade</a>
+        <a href="termsOfService.html" id="terms-link">Termos de Serviço</a>
+		<a href="support.html" id="support">Suporte</a>
+        <div class="language-links">
+            <a href="#" id="link-pt">PT</a> | <a href="#" id="link-en">EN</a>
+        </div>
+    </nav>
+    <main>
+        <h2 id="contact">Contacto</h2>
+        <p id="contact-email">Para ajuda contacte o nosso suporte através de al.manager23@gmail.com</p>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "home-link": "Home",
+                "privacy-link": "Privacy Policy",
+                "terms-link": "Terms of Service",
+                "support" : "Support",
+				"contact" : "Contact",
+				"contact-email" : "For support please contact us via o al.manager23@gmail.com"
+            },
+            pt: {
+                "header-title": "SEF Boletins de Alojamento",
+                "page-title": "SEF Boletins de Alojamento",
+                "home-link": "Página Inicial",
+                "privacy-link": "Política de Privacidade",
+                "terms-link": "Termos de Serviço",
+                "support" : "Support",
+				"contact" : "Contacto",
+				"contact-email" : "Para ajuda contacte o nosso suporte através de al.manager23@gmail.com"
+            }
+        };
+
+        let currentLanguage = localStorage.getItem('language') || 'pt'; // Default language is Portuguese
+
+        function loadLanguage(language) {
+            const lang = translations[language];
+            for (let id in lang) {
+                const element = document.getElementById(id);
+                if (element) {
+                    element.innerHTML = lang[id];
+                }
+            }
+        }
+
+        document.getElementById('link-en').addEventListener('click', () => {
+            currentLanguage = 'en';
+            localStorage.setItem('language', currentLanguage);
+            loadLanguage(currentLanguage);
+        });
+
+        document.getElementById('link-pt').addEventListener('click', () => {
+            currentLanguage = 'pt';
+            localStorage.setItem('language', currentLanguage);
+            loadLanguage(currentLanguage);
+        });
+
+        loadLanguage(currentLanguage); // Initial language load
+    </script>
+</body>
+</html>
